@@ -1,0 +1,47 @@
+.general-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.general-container .content-container .title h1 span {
+  background-image: linear-gradient(90deg, var(--accent-clr-d), var(--accent-clr-l));
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+}
+.general-container .content-container .content #cta-btn {
+  cursor: pointer;
+  position: relative;
+  border: solid transparent 3px;
+  border-radius: var(--button-border-radius);
+  background-color: var(--d-body-clr);
+  background-clip: padding-box;
+  padding-block: var(--button-cta-padding-block);
+  padding-inline: var(--button-cta-padding-inline);
+}
+.general-container .content-container .content #cta-btn .main-cta-btn {
+  border: none;
+  font-size: var(--font-size-paragraph);
+  font-weight: 500;
+  background-image: linear-gradient(90deg, var(--accent-clr-d), var(--accent-clr-l));
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+}
+.general-container .content-container .content #cta-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: inherit;
+  margin: -3px;
+  background-image: linear-gradient(90deg, var(--accent-clr-d), var(--accent-clr-l));
+}
+.general-container .content-container .content #cta-btn:hover {
+  background-color: rgba(0, 0, 0, 0);
+}
+.general-container .content-container .content #cta-btn:hover .main-cta-btn {
+  color: var(--d-text-clr);
+}/*# sourceMappingURL=styles.css.map */

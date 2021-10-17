@@ -1,0 +1,229 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+@import url("https://cdn.iconmonstr.com/1.3.0/css/iconmonstr-iconic-font.min.css");
+:root {
+  --l-body-clr: #f8f9fa;
+  --l-light-clr: #F1F3F4;
+  --l-separator-clr: #d5d6d6;
+  --l-text-clr: #000;
+  --d-body-clr: #1a1a1b;
+  --d-light-clr: #272729;
+  --d-separator-clr: #4d4d4d;
+  --d-text-clr: #FFF;
+  --accent-clr-d: #09c3f1;
+  --accent-clr-l: #8e4df6;
+  --font-size-title: clamp(2.2rem, 3.2vw, 3.2rem);
+  --font-size-subtitle: clamp(1.8rem, 2.5vw, 2.4rem);
+  --font-size-paragraph: clamp(1.1rem, 1.35vw, 1.3rem);
+  --font-size-button: clamp(.93rem, 1vw, 1.13rem);
+  --font-size-nav: calc(var(--font-size-button) + 3px);
+  --font-size-full-nav: clamp(1.2rem, 2.78vw ,1.5rem);
+  --nav-height: 4.5rem;
+  --padding-nav-block: 1.5rem;
+  --wrapper-nav: clamp(.85rem, 4.7vw, 8rem);
+  --wrapper-general-block: calc(var(--wrapper-nav) + 7rem);
+  --wrapper-general-inline: clamp(.85rem, 11vw, calc(var(--wrapper-nav) + 4rem));
+  --button-cta-padding-block: clamp(1rem, 1.1vw, 1.3rem);
+  --button-cta-padding-inline: clamp(2.3rem, 3vw, 3.5rem);
+  --button-border-radius: 7px;
+}
+
+*,
+*:before,
+*:after,
+html {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  scroll-margin-top: calc(var(--padding-nav-block) * 3 + 1rem);
+}
+
+* {
+  font-family: "Ubuntu", sans-serif;
+}
+
+body {
+  background-color: var(--d-body-clr);
+  color: var(--d-text-clr);
+}
+
+.nav-bar {
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  width: 100%;
+  background-color: var(--d-light-clr);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: var(--nav-height);
+  padding: var(--padding-nav-block) var(--wrapper-nav);
+  border-bottom: solid var(--d-separator-clr) 1.5px;
+}
+.nav-bar .main-logo {
+  width: calc(var(--nav-height) - 2px);
+}
+.nav-bar .main-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-block: var(--padding-nav-block);
+}
+.nav-bar .main-nav li {
+  list-style: none;
+  margin-inline: 2rem;
+}
+.nav-bar .main-nav a {
+  text-decoration: none;
+  color: var(--d-text-clr);
+  font-weight: 500;
+  font-size: var(--font-size-nav);
+}
+.nav-bar .main-nav li:hover a,
+.nav-bar .main-nav li:hover .im {
+  background-image: linear-gradient(90deg, var(--accent-clr-d), var(--accent-clr-l));
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+}
+.nav-bar .main-nav .dropdown {
+  position: relative;
+  height: 100%;
+}
+.nav-bar .main-nav .dropdown .main-li .im {
+  font-size: calc(var(--font-size-nav) - 3px);
+  cursor: pointer;
+  padding-left: 3px;
+}
+.nav-bar .main-nav .dropdown .dropdown-content {
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  top: calc(var(--nav-height) / 2);
+  padding-block: calc(var(--padding-nav-block) - 10px);
+  min-width: 100%;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: var(--d-separator-clr);
+  border-radius: var(--button-border-radius);
+}
+.nav-bar .main-nav .dropdown .dropdown-content li {
+  margin-block: 5px;
+  padding-block: 2px;
+}
+.nav-bar .hamburg-nav {
+  display: none;
+}
+
+.fullsize-nav {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--d-light-clr);
+}
+.fullsize-nav .nav-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+.fullsize-nav .nav-content li {
+  text-align: start;
+  list-style: none;
+}
+.fullsize-nav .nav-content li a {
+  text-decoration: none;
+  font-size: var(--font-size-full-nav);
+  color: var(--d-text-clr);
+}
+.fullsize-nav .nav-content li .im {
+  font-size: calc(var(--font-size-full-nav) - 3px);
+  cursor: pointer;
+  padding-left: 3px;
+}
+.fullsize-nav .nav-content li:hover a,
+.fullsize-nav .nav-content li:hover .im {
+  background-image: linear-gradient(90deg, var(--accent-clr-d), var(--accent-clr-l));
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+}
+.fullsize-nav .nav-content .dropdown-content {
+  text-indent: 0.9rem;
+  opacity: 0;
+  pointer-events: none;
+}
+
+@media screen and (max-width: 870px) {
+  .nav-bar .main-nav {
+    display: none;
+  }
+  .nav-bar .hamburg-nav {
+    display: flex;
+  }
+}
+.general-container {
+  padding: var(--wrapper-general-block) var(--wrapper-general-inline);
+}
+.general-container h1 {
+  font-size: var(--font-size-title);
+}
+.general-container h2 {
+  font-size: var(--font-size-subtitle);
+  font-weight: 500;
+}
+.general-container p {
+  font-size: var(--font-size-paragraph);
+}
+.general-container .title {
+  margin-bottom: 3rem;
+}
+.general-container .content {
+  display: flex;
+  gap: 1.5rem;
+  width: 100%;
+}
+.general-container .content .content-nav {
+  list-style: lower-alpha;
+  width: 43%;
+}
+.general-container .content .content-nav li {
+  padding-block: 0.5rem;
+  border-bottom: solid var(--d-separator-clr) 2px;
+}
+.general-container .content .content-nav li a {
+  text-decoration: none;
+  color: var(--d-text-clr);
+  font-size: var(--font-size-nav);
+}
+.general-container .content .content-nav li:hover {
+  border-bottom: none;
+}
+.general-container .content .content-nav li:hover a {
+  background-image: linear-gradient(90deg, var(--accent-clr-d), var(--accent-clr-l));
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+}
+.general-container .content .main-content {
+  width: 100%;
+}
+.general-container .content .main-content .answers {
+  padding-bottom: 5rem;
+}
+.general-container .content .main-content .answers h2,
+.general-container .content .main-content .answers p,
+.general-container .content .main-content .answers .reference {
+  padding-bottom: 0.5rem;
+}
+.general-container .content .main-content .answers li,
+.general-container .content .main-content .answers a {
+  font-size: var(--font-size-paragraph);
+}/*# sourceMappingURL=styles.css.map */
