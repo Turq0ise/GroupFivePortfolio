@@ -24,8 +24,7 @@
                 border-radius: var(--button-border-radius);
                 background-color: var(--d-body-clr);
                 background-clip: padding-box;
-                padding-block: var(--button-cta-padding-block);
-                padding-inline: var(--button-cta-padding-inline);
+                padding: var(--button-cta-padding-block) var(--button-cta-padding-inline);
 
                 .main-cta-btn {
                     border: none;

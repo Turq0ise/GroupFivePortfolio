@@ -1,0 +1,52 @@
+.general-container {
+    .content {
+        display: flex;
+        justify-content: center;
+        flex-flow: row wrap;
+
+        .card {
+            width: var(--card-width);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: var(--card-padding-block) var(--card-padding-inline);
+            position: relative;
+            border: solid transparent 5px;
+            border-radius: var(--button-border-radius);
+            background-color: var(--d-body-clr);
+            background-clip: padding-box;
+            text-align: center;
+
+            h2 {
+                padding-bottom: 1rem;
+            }
+
+            a {
+                cursor: pointer;
+                padding: var(--button-cta-padding-block) var(--button-cta-padding-inline);
+                cursor: inherit;
+                border: none;
+                font-size: var(--font-size-paragraph);
+                font-weight: 500;
+                color: var(--d-text-clr);
+                background-image: linear-gradient(90deg, var(--accent-clr-d), var(--accent-clr-l));
+                background-clip: text;
+                text-decoration: none;
+            }
+
+            a:hover {
+                color: transparent;
+            }
+        }
+
+        .card::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+            border-radius: inherit;
+            margin: -5px;
+            background-image: linear-gradient(90deg, var(--accent-clr-d), var(--accent-clr-l));
+        }
+    }
+}

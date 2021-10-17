@@ -25,6 +25,9 @@
   --button-cta-padding-block: clamp(1rem, 1.1vw, 1.3rem);
   --button-cta-padding-inline: clamp(2.3rem, 3vw, 3.5rem);
   --button-border-radius: 7px;
+  --card-width: clamp(16rem, 25vw, 25rem);
+  --card-padding-block: clamp(6rem, 15vw, 14rem);
+  --card-padding-inline: .85rem;
 }
 
 *,
