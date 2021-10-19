@@ -1,6 +1,6 @@
+const dropdownContent = document.getElementById("dropdown-content")
 function dropdown() {
     const dropdownBtn = document.getElementById("dropdown-btn")
-    const dropdownContent = document.getElementById("dropdown-content")
     
     if(dropdownContent.style.opacity == 0) {
         dropdownBtn.classList.replace("im-angle-down", "im-angle-up")
@@ -13,18 +13,18 @@ function dropdown() {
     }
 }
 
+const dropdownContentFull = document.getElementById("dropdown-content-full")
 function dropdownFull() {
     const dropdownBtn = document.getElementById("dropdown-btn-full")
-    const dropdownContent = document.getElementById("dropdown-content-full")
     
     if(dropdownContent.style.opacity == 0) {
         dropdownBtn.classList.replace("im-angle-down", "im-angle-up")
-        dropdownContent.style.opacity = 1
-        dropdownContent.style.pointerEvents = "auto"
+        dropdownContentFull.style.opacity = 1
+        dropdownContentFull.style.pointerEvents = "auto"
     } else if(dropdownContent.style.opacity == 1) {
         dropdownBtn.classList.replace("im-angle-up", "im-angle-down")
-        dropdownContent.style.opacity = 0
-        dropdownContent.style.pointerEvents = "none"
+        dropdownContentFull.style.opacity = 0
+        dropdownContentFull.style.pointerEvents = "none"
     }
 }
 
@@ -41,8 +41,25 @@ function hamburgNav() {
     }
 }
 
-window.addEventListener('load', () => {
-    const dropdownContent = document.getElementById("dropdown-content")
-    console.log(dropdownContent.children[0].children[0].attributes);
-    console.log(dropdownContent.children[1].children[0].attributes);
-});
+function showMessage() {
+    document.body.innerHTML += `<div class="message-container" id="message-container"><div class="message"><i class="im im-clock"></i><p>Coming Soon!</p></div></div>`
+
+    setTimeout(() => {
+        var messageToRemove = document.getElementById("message-container")
+        messageToRemove.remove()
+    }, 2800)
+}
+
+// window.addEventListener('load', () => {
+//     dropdownContent.children.forEach(c => {
+//         if(c.children.attributes[href].value === "") {
+//             c.addEventListener('onclick', () => {
+//                 alert("bruh")
+//             })
+//         }
+//     });
+
+//     console.log(dropdownContent.children)
+//     console.log(dropdownContent.children[0].children[0].attributes);
+//     console.log(dropdownContent.children[1].children[0].attributes);
+// });
