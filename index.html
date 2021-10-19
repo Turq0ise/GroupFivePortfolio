@@ -10,8 +10,7 @@
     <link rel="manifest" href="IMG/Favicon/site.webmanifest">
     <link rel="stylesheet" href="SCSS/Global/styles.css">
     <link rel="stylesheet" href="SCSS/Index/styles.css">
-    <script src="JS/Global/script.js"></script>
-    <script src="JS/Index/script.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script> -->
     <title>GroupFivePortfolio</title>
 </head>
 <body onload="btnDateChange()">
@@ -52,12 +51,25 @@
             <div class="title">
                 <h1>Welcome to the <span>Group 5</span> Portfolio</h1>
             </div>
-            <div class="content">
-                <div id="cta-btn">
-                    <!-- button will change depending on the date -->
-                </div>
+            <div class="content" id="content">
+                <!-- button will change depending on the date -->
             </div>
         </div>
     </div>
+
+    <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfcWFU_SEP5CvtXEVUaOSNbPDZaQbc-5uBX5_yeXPzpqxKCoQ/formResponse" target="_blank" id="main-form" method="post">
+        <div class="form-questions">
+            <label>Email:</label>
+            <input type="email" name="entry.855296893">
+        </div>
+        <div class="form-questions">
+            <label>Message:</label>
+            <input type="text" name="entry.1953610892">
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+
+    <script src="JS/Global/script.js"></script>
+    <script src="JS/Index/script.js"></script>
 </body>
 </html>

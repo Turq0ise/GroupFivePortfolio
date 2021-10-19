@@ -5,10 +5,11 @@
 }
 .general-container .content .card {
   width: var(--card-width);
+  height: var(--card-height);
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: var(--card-padding-block) var(--card-padding-inline);
+  padding: var(--card-padding);
   position: relative;
   border: solid transparent 5px;
   border-radius: var(--button-border-radius);

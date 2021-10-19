@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../IMG/Favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../../IMG/Favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../../IMG/Favicon/favicon-16x16.png">
+    <link rel="manifest" href="../../../IMG/Favicon/site.webmanifest">
+    <link rel="stylesheet" href="../../../SCSS/Global/styles.css">
+    <link rel="stylesheet" href="../../../SCSS/PROJECTS/Q1/Journey/styles.css">
+    <title>GroupFivePortfolio - EG5-6 EXPERIENCE 3</title>
+</head>
+<body>
+    <nav class="nav-bar">
+        <a href="../../../index.html"><img src="../../../IMG/Logo/logo.svg" alt="Group 5" class="main-logo"></a>
+        <div class="main-nav">
+            <li class="main-li"><a href="../../../index.html">Home</a></li>
+            <div class="dropdown">
+                <li class="main-li"><a href="../../index.html">Projects</a><i class="im im-angle-down" id="dropdown-btn" onclick="dropdown()"></i></li>
+                <div class="dropdown-content" id="dropdown-content">
+                    <li><a href="../index.html">Q1</a></li>
+                    <li><a href="">Q2</a></li>
+                    <li><a href="">Q3</a></li>
+                    <li><a href="">Q4</a></li>
+                </div>
+            </div>
+        </div>
+        <div class="hamburg-nav">
+            <i class="im im-menu"></i>
+        </div>
+    </nav>
+
+    <div class="general-container">
+        <div class="title">
+            <h1>EG5-6 EXPERIENCE 3</h1>
+            <p>How do I explain the use of Javascript switch?</p>
+        </div>
+        <div class="content">
+            <nav class="content-nav">
+                <li><a href="#a">Definition</a></li>
+                <li><a href="#b">Syntax</a></li>
+                <li><a href="#c">How to use it?</a></li>
+            </nav>
+            <div class="main-content">
+                <div class="answers" id="a">
+                    <h2>a. Definition:</h2>
+                    <p>A switch statement is similar to an if-else statement in that they are both decision making statements or functions. Switch statements are more used than if-else statements when you are dealing with a lot of data because of its more simpler syntax.</p>
+                </div>
+                <div class="answers" id="b">
+                    <h2>b. Syntax:</h2>
+                    <p>A switch statement takes in an expression to evaluate. That expression can be a variable but you are not limited.</p>
+                    <script src="https://gist.github.com/Turq0ise/51c514bf16d502e98492c58a52475b35.js"></script>
+                    <p>Inside the switch statement will be the decision making part of the statement. We use cases for the different outcomes of the chosen expression and put breaks at the end of each case to finish the switch statement.</p>
+                    <script src="https://gist.github.com/Turq0ise/3be80a2f8544e27f487c2a8b392f1665.js"></script>
+                    <p>The 1 and 2 beside the case are the possible values/outcomes of the expression. But you are also not limited to 1 and 2, you can put almost anything there. What you put inside the cases are also limitless.</p>
+                    <p>With the same indentation as the cases you can also put a default at the end of the switch statement to provide a default action. What you can put inside is also limitless and doesn’t require a break.</p>
+                    <script src="https://gist.github.com/Turq0ise/ea4130306ef4f6632c92ebf238c87093.js"></script>
+                    <p>The final syntax will look like this: The variable expression is just an example</p>
+                    <script src="https://gist.github.com/Turq0ise/a3ce3397872f7ccefe5066c375bd3ede.js"></script>
+                </div>
+                <div class="answers" id="c">
+                    <h2>c. How to use it?</h2>
+                    <p>Switch statements are an auto run function because without calling the function separately, it will run. The same could be said with if-else statements. But that doesn’t mean that you are limited to this. You could put a switch statement inside of a function that only runs when you either want it to, intend it to, or when it reaches a certain outcome.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../../JS/Global/script.js"></script>
+</body>
+</html>

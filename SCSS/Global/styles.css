@@ -13,6 +13,7 @@
   --accent-clr-l: #8e4df6;
   --font-size-title: clamp(2.2rem, 3.2vw, 3.2rem);
   --font-size-subtitle: clamp(1.8rem, 2.5vw, 2.4rem);
+  --font-size-aftertitle: clamp(1.5rem, 2vw, 1.85rem);
   --font-size-paragraph: clamp(1.1rem, 1.35vw, 1.3rem);
   --font-size-button: clamp(.93rem, 1vw, 1.13rem);
   --font-size-nav: calc(var(--font-size-button) + 3px);
@@ -26,8 +27,8 @@
   --button-cta-padding-inline: clamp(2.3rem, 3vw, 3.5rem);
   --button-border-radius: 7px;
   --card-width: clamp(16rem, 25vw, 25rem);
-  --card-padding-block: clamp(6rem, 15vw, 14rem);
-  --card-padding-inline: .85rem;
+  --card-height: clamp(19.5rem, 32vw, 33rem);
+  --card-padding: .85rem;
 }
 
 *,
@@ -182,6 +183,10 @@ body {
   font-size: var(--font-size-subtitle);
   font-weight: 500;
 }
+.general-container h3 {
+  font-size: var(--font-size-aftertitle);
+  font-weight: 500;
+}
 .general-container p {
   font-size: var(--font-size-paragraph);
 }
@@ -225,6 +230,12 @@ body {
 .general-container .content .main-content .answers p,
 .general-container .content .main-content .answers .reference {
   padding-bottom: 0.5rem;
+}
+.general-container .content .main-content .answers h3 {
+  padding-top: 0.5rem;
+}
+.general-container .content .main-content .answers a {
+  color: var(--accent-clr-l);
 }
 .general-container .content .main-content .answers li,
 .general-container .content .main-content .answers a {
