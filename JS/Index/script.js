@@ -17,17 +17,16 @@ function btnDateChange() {
     }
 }
 
-var mainForm = document.querySelector("#main-form");
+// var mainForm = document.querySelector("#main-form");
+// mainForm.addEventListener("submit", (e)=> {
+//     e.preventDefault()
+//     const form = e.target
+//     var data = new FormData(form)
 
-mainForm.addEventListener("submit", (e)=> {
-    e.preventDefault()
-    const form = e.target
-    var data = new FormData(form)
-
-    fetch(form.action, {
-        method: form.method,
-        body: data
-    }).then(
-        alert("Form Submitted")
-    )
-})
+//     fetch(form.action, {
+//         method: form.method,
+//         body: data
+//     }).then(
+//         alert("Form Submitted")
+//     )
+// })
