@@ -60,7 +60,15 @@ body {
   pointer-events: none;
   width: 100%;
 }
-.message-container .message {
+.message-container .relative {
+  position: relative;
+}
+.message-container .relative .absolute {
+  position: absolute;
+  top: 0;
+  left: 50%;
+}
+.message-container .relative .absolute .message {
   display: flex;
   flex-direction: row;
   gap: 5px;
@@ -71,10 +79,10 @@ body {
   background-color: var(--d-body-clr);
   background-clip: padding-box;
 }
-.message-container .message p {
+.message-container .relative .absolute .message p {
   font-size: var(--font-size-paragraph);
 }
-.message-container .message::before {
+.message-container .relative .absolute .message::before {
   content: "";
   position: absolute;
   inset: 0;

@@ -1,3 +1,6 @@
+.general-container .title {
+  text-align: center;
+}
 .general-container .content {
   display: flex;
   justify-content: center;

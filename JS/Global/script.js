@@ -42,7 +42,16 @@ function hamburgNav() {
 }
 
 function showMessage() {
-    document.body.innerHTML += `<div class="message-container" id="message-container"><div class="message"><i class="im im-clock"></i><p>Coming Soon!</p></div></div>`
+    document.body.innerHTML += 
+    `<div class="message-container" id="message-container">
+        <div class="relative">
+            <div class="absolute">
+                <div class="message">
+                    <i class="im im-clock"></i><p>Coming Soon!</p>
+                </div>
+            </div>
+        </div>
+    </div>`
 
     setTimeout(() => {
         var messageToRemove = document.getElementById("message-container")
