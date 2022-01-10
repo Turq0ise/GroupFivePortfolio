@@ -1,7 +1,24 @@
+table {
+    border-collapse: collapse;
+    border-radius: var(--button-border-radius);
+    overflow: hidden;
+
+    th {
+        border: solid var(--d-separator-clr) var(--card-padding);
+        font-size: var(--font-size-paragraph);
+        font-weight: 400;
+        padding: var(--card-padding);
+    }
+}
+
 @media screen and (max-width: 1060px) {
     .general-container {
         .content {
             flex-direction: column;
+
+            .content-nav {
+                display: none;
+            }
         }
     }
 }

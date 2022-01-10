@@ -42,7 +42,16 @@ function hamburgNav() {
 }
 
 function showMessage() {
-    document.body.innerHTML += 
+    const message = document.getElementById("message-container")
+    message.style.display = "flex"
+
+    setTimeout(() => {
+        message.style.display = "none"
+    }, 2800)
+}
+
+window.onload = () => {
+    const message =
     `<div class="message-container" id="message-container">
         <div class="relative">
             <div class="absolute">
@@ -53,10 +62,12 @@ function showMessage() {
         </div>
     </div>`
 
-    setTimeout(() => {
-        var messageToRemove = document.getElementById("message-container")
-        messageToRemove.remove()
-    }, 2800)
+    let messageObj = document.createElement('div')
+    messageObj.innerHTML= message
+
+    document.body.insertAdjacentElement("afterbegin", messageObj)
+
+    btnDateChange()
 }
 
 // window.addEventListener('load', () => {
