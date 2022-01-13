@@ -62,12 +62,40 @@ window.onload = () => {
         </div>
     </div>`
 
-    let messageObj = document.createElement('div')
-    messageObj.innerHTML= message
+    let messageObj = document.createElement("div")
+    messageObj.innerHTML = message
 
     document.body.insertAdjacentElement("afterbegin", messageObj)
 
+    const button = 
+    `<div class="goToTop">
+        <button class="im im-angle-up" id="mainGoToTop"></button>
+    </div>`
+
+    let buttonObj = document.createElement("div")
+    buttonObj.id = "bruh"
+    buttonObj.setAttribute("onclick", "goUp()")
+    buttonObj.innerHTML = button
+
+    document.body.insertAdjacentElement("afterbegin", buttonObj)
+
     btnDateChange()
+}
+
+
+window.onscroll = () => {
+    const bruhButton = document.getElementById("bruh")
+
+    if (document.body.scrollTop > 110 || document.documentElement.scrollTop > 110) {
+        bruhButton.style.display = "block";
+    } else {
+        bruhButton.style.display = "none";
+    }
+}
+
+function goUp() {
+    document.body.scrollTop = 0
+    document.documentElement.scrollTop = 0
 }
 
 // window.addEventListener('load', () => {
