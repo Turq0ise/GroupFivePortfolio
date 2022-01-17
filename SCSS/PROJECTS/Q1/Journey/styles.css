@@ -3,11 +3,22 @@ table {
   border-radius: var(--button-border-radius);
   overflow: hidden;
 }
-table th {
+table th,
+table td {
   border: solid var(--d-separator-clr) var(--card-padding);
   font-size: var(--font-size-paragraph);
   font-weight: 400;
   padding: var(--card-padding);
+}
+table th {
+  background-color: var(--d-light-clr);
+}
+
+#promotional-material {
+  border: solid var(--d-separator-clr) var(--card-padding);
+  border-radius: var(--button-border-radius);
+  width: min(600px, 100%);
+  height: auto;
 }
 
 @media screen and (max-width: 1060px) {

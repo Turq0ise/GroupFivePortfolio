@@ -38,6 +38,7 @@
 }
 .general-container .content .card a:hover {
   color: transparent;
+  cursor: pointer;
 }
 .general-container .content .card::before {
   content: "";
