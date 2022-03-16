@@ -23,6 +23,17 @@ table {
     height: auto;
 }
 
+.image-set {
+    display: flex;
+    flex-direction: column;
+    gap: var(--padding-nav-block);
+}
+
+.data-set {
+    border-radius: var(--button-border-radius);
+    width: var(--card-height);
+}
+
 @media screen and (max-width: 1060px) {
     .general-container {
         .content {

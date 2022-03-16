@@ -242,7 +242,7 @@ body {
   width: 100%;
 }
 .general-container .content .content-nav {
-  list-style: lower-alpha;
+  list-style: upper-roman;
   width: 43%;
 }
 .general-container .content .content-nav li {
