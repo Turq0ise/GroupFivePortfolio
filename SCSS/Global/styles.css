@@ -271,8 +271,9 @@ body {
 }
 .general-container .content .main-content .answers h2,
 .general-container .content .main-content .answers p,
-.general-container .content .main-content .answers .reference {
-  padding-bottom: 0.5rem;
+.general-container .content .main-content .answers .reference,
+.general-container .content .main-content .answers ul {
+  padding-bottom: 1.1rem;
 }
 .general-container .content .main-content .answers h3 {
   padding-top: 0.5rem;

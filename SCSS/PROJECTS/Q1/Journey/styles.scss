@@ -26,7 +26,12 @@ table {
 .image-set {
     display: flex;
     flex-direction: column;
-    gap: var(--padding-nav-block);
+
+    p {
+        font-style: italic;
+        font-size: var(--font-size-button);
+        margin-bottom: var(--padding-nav-block);
+    }
 }
 
 .data-set {
